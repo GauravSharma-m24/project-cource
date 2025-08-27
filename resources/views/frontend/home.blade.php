@@ -1,6 +1,16 @@
 @extends('frontend.master_layout')
 @section('content')
 <style>
+    .carousel-img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel-img img {
+        height: 100%;
+        width: 100%;
+    }
+
     .card-content {
         background-color: rgba(0, 0, 0, 0.6)
         
@@ -241,13 +251,13 @@
                 <div class="container wow scaleIn" data-wow-duration="3s">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <div class="subtitle">JUST LIKE A VIDEO GAME YOU NEED TO</div>
+                            <div class="subtitle">JUST LIKE A VIDEO GAME</div>
                             <h1 class="fs-120 text-uppercase fs-sm-12vw mb-4 lh-1">Level Up Every area of Your Life</h1>
 
                             <div class="d-block d-md-flex justify-content-center">
                                 <div class="d-flex justify-content-center align-items-center mx-4">
                                     {{-- <i class="fa fa-calendar id-color me-3"></i> --}}
-                                    <p class="mb-0">This isn’t just another course. It’s a complete platform designed to sharpen your mind, habits, health, and income, so you grow in every area that matters.</p>
+                                    {{-- <p class="mb-0">This isn’t just another course. It’s a complete platform designed to sharpen your mind, habits, health, and income, so you grow in every area that matters.</p> --}}
                                 </div>
 
                                 {{-- <div class="d-flex justify-content-center align-items-center mx-4">
@@ -501,11 +511,11 @@
             <div class="container">
                 <div class="row g-4">
                      
-                        <div class="col-lg-5 offset-lg-1 align-self-center">
-                                            <div class="p-3">
+                                        <div class="col-lg-5 offset-lg-1 align-self-center">
+                                            <div class="">
                                                 <div class="subtitle wow fadeInUp">ONE YEAR IS ALL YOU NEED </div>
                                                 <h1 class=" wow fadeInUp" data-wow-delay=".2s">LOCK IN FOR THE NEXT YEAR</h1>
-                                                <p class=" wow fadeInUp">You can get rich with just one year of focus... But only if you invest focus in the right business models using the right information.
+                                                <p class=" wow fadeInUp ">You can get rich with just one year of focus... But only if you invest focus in the right business models using the right information.
                                                     In The Real World you will get access to multimillionaire professors who will give you a step-by-step path to reach your goals as fast as humanly possible.
                                                 </p>
                                                 <a class="btn-main mx-2 fx-slide" href="{{route('register_form')}}"><span>Join {{ $global['site_name'] ?? 'Tecrat' }} Now</span></a>
@@ -513,15 +523,15 @@
                                         </div><!--end col-->
                                         <div class="col-lg-5 offset-lg-1 text-center">
     
-                                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                            <div id="carouselExampleSlidesOnly" class="carousel slide carousel-img" data-bs-ride="carousel">
                                                 <div class="carousel-inner">
-                                                    <div class="carousel-item active">
+                                                    <div class="carousel-item active ">
                                                         <img src="{{ asset('assets/images/frontend/slider1.jpg') }}" class="d-block w-100" alt="...">
                                                     </div>
-                                                    <div class="carousel-item">
+                                                    <div class="carousel-item carousel-img">
                                                         <img src="assets/images/frontend/slider2.jpg" class="d-block w-100" alt="...">
                                                     </div>
-                                                    <div class="carousel-item">
+                                                    <div class="carousel-item carousel-img">
                                                         <img src="assets/images/extra/card/img-3.jpg" class="d-block w-100" alt="...">
                                                     </div>
                                                 </div>

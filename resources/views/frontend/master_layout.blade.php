@@ -88,6 +88,20 @@
         z-index: 1;
         }
 
+        @media (max-width: 991px) {
+        #mainmenu {
+            display: none;
+            flex-direction: column;
+            gap: 15px;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        #mainmenu.show {
+            display: flex;
+        }
+        }
+
+
     </style>
     
 
@@ -136,7 +150,7 @@
                                         <li><a class="menu-item" href="#section-venue">Venue</a></li>
                                         <li><a class="menu-item" href="#section-faq">FAQ</a></li> --}}
                                         <li><a class="menu-item" href="news.html">Courses</a>
-                                            <ul>
+                                            <ul id="mainmenu">
                                                 <li><a class="menu-item" href="{{ route('courses.automation') }}">Automation Business</a>
                                                         {{-- <ul>
                                                             <li><a class="menu-item" href="">C1</a></li>
@@ -147,7 +161,7 @@
                                             </ul>
                                         </li>
                                         <li><a class="menu-item" href="news.html">Pages</a>
-                                            <ul>
+                                            <ul id="mainmenu">
                                                 <li><a class="menu-item" href="{{route('register_form')}}">Register</a></li>
                                                 <li><a class="menu-item" href="{{route('login_form')}}">Login</a></li>
                                                 
@@ -157,7 +171,7 @@
                                 </div>
                             </div>
 
-                            <div class="de-flex-col">
+                            <div class="de-flex-col" >
                                 <a class="btn-main fx-slide w-100" href="{{route('login_form')}}"><span>Login</span></a>
 
                                 <div class="menu_side_area">
@@ -266,6 +280,12 @@
     <script src="{{asset('assets/libs/fullcalendar/index.global.min.js')}}"></script>
     <script src="{{asset('assets/js/affiliate/pages/calendar.init.js')}}"></script> --}}
     <script src="{{asset('assets/js/affiliate/app.js')}}"></script>
+
+    <script>
+    document.getElementById("menu-btn").addEventListener("click", function () {
+        document.getElementById("mainmenu").classList.toggle("show");
+    });
+    </script>
 
 </body>
 
